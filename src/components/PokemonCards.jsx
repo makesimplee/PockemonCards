@@ -8,7 +8,6 @@ export const PokemonCards =({PokemonData})=>{
            />
         </figure>
       
-
       <h1 className="pokemon-name">{PokemonData.name}</h1>
       <div className="pokemon-info pokemon-highlight">
       <p>{

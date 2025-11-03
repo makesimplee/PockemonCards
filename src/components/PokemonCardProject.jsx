@@ -2,13 +2,13 @@ import "./pokemon.css"
 import{useState,useEffect} from "react";
 import { PokemonCards } from "./PokemonCards";
 
+
 export const PokemonCardProject = () =>{
-   const [pokemon,setPokemon]=useState([]);
+  const [pokemon,setPokemon]=useState([]);
   const[loading,setLoading] = useState(true);
-  const[error,setError] = useState(null)
+  const[error,setError] = useState(null);
 
-
-    const fetchPokemon = async() =>{
+  const fetchPokemon = async() =>{
     try{
      const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=96");
      const data = await res.json();
@@ -31,8 +31,6 @@ setLoading(false);
     }
 }
 
-
-
     useEffect(()=>{
     fetchPokemon();
     },[]);
@@ -51,7 +49,6 @@ if(error){
         </div>
     )
 }
-
 
     return(
         <>
